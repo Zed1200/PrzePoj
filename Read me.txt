@@ -1,0 +1,9 @@
+Program przelicza pojemność nośnika jaka jest dostępna dla użytkownika z jednostek fizycznych na jednosteki informatyczne.
+KB - kilo bajty, MB - mega bajty, GB - giga bajty,\nTB - tera bajty, PB - peta bajty, EB - eksa bajty,\nZB - zetta bajty, YB - jotta bajty
+
+Tłumaczenie na angielski google translator
+
+The program converts the capacity of the medium that is available to the user from physical units to IT units.
+KB - kilo bytes, MB - mega bytes, GB - giga bytes, \ nTB - tera bytes, PB - pet bytes, EB - ex bytes, \ nZB - zetta bytes, YB - jotte bytes
+
+Translation into english google translator

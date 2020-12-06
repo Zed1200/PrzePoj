@@ -17,7 +17,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion("0.1.*")]
+[assembly: AssemblyVersion("0.11.*")]
 
 /*
 KB, MB, GB, TB, PB - peta bajty, EB - eksa bajty, ZB - zetta bajty, YB - jotta bajty
@@ -96,38 +96,33 @@ public class Okno:Form
 			label_wynik_odpowiedz_1.Top = 120;
 			this.Controls.Add(label_wynik_odpowiedz_1);
 			
-		if (COMBOBOX_STRING_0 == "KB")
-		{
-			label_wynik_odpowiedz_2.Text = WYLICZENIE_WARTOSCI.ToString("N2")+" "+ "KB";
-		}
-		else if (COMBOBOX_STRING_0 == "MB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "KB";
-		}
-		else if (COMBOBOX_STRING_0 == "GB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "MB";
-		}
-		else if (COMBOBOX_STRING_0 == "TB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "GB";
-		}
-		else if (COMBOBOX_STRING_0 == "PB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "TB";
-		}
-		else if (COMBOBOX_STRING_0 == "EB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "PB";
-		}
-		else if (COMBOBOX_STRING_0 == "ZB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "EB";
-		}
-		else if (COMBOBOX_STRING_0 == "YB")
-		{
-			label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "ZB";
-		}
+			switch (COMBOBOX_STRING_0)
+			{
+				case "KB":
+					label_wynik_odpowiedz_2.Text = WYLICZENIE_WARTOSCI.ToString("N2")+" "+ "KB";
+					break;
+				case "MB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "KB";
+					break;
+				case "GB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "MB";
+					break;
+				case "TB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "GB";
+					break;
+				case "PB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "TB";
+					break;
+				case "EB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "PB";
+					break;
+				case "ZB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "EB";
+					break;
+				case "YB":
+					label_wynik_odpowiedz_2.Text = odpowiedz_2.ToString("N2")+" "+ "ZB";
+					break;
+			}
 			
 			label_wynik_odpowiedz_2.AutoSize = true;
 			label_wynik_odpowiedz_2.Left = 150;
@@ -202,7 +197,6 @@ public class Okno:Form
 		label_wynik2.Top = 145;
 		this.Controls.Add(label_wynik2);
 
-		
 		// Combo
 		
 		combobox_wielokrotnosc_danych = new ComboBox();
@@ -246,7 +240,6 @@ public class Okno:Form
 			FUNKCJE
 	*/
 	
-	
 	//Sprawdzanie czy dany ciąg znaków to liczba
 		   
 	static char Czy_to_jest_liczba (string czy_to_liczba)
@@ -281,36 +274,32 @@ public class Okno:Form
 		pojemnosc_fizyczna = 1;
 		pojemnosc_informatyczna = 1;
 		mnoznik = 1;
-		
-		if (wielokrotnosc_danych == "MB")
-		{
-			mnoznik = 2;
-		}
-		else if (wielokrotnosc_danych == "GB")
-		{
-			mnoznik = 3;
-		}
-		else if (wielokrotnosc_danych == "TB")
-		{
-			mnoznik = 4;
-		}
-		else if (wielokrotnosc_danych == "PB")
-		{
-			mnoznik = 5;
-		}
-		else if (wielokrotnosc_danych == "EB")
-		{
-			mnoznik = 6;
-		}
-		else if (wielokrotnosc_danych == "ZB")
-		{
-			mnoznik = 7;
-		}
-		else if (wielokrotnosc_danych == "YB")
-		{
-			mnoznik = 8;
-		}
-		
+
+			switch (wielokrotnosc_danych)
+			{
+				case "MB":
+					mnoznik = 2;
+					break;
+				case "GB":
+					mnoznik = 3;
+					break;
+				case "TB":
+					mnoznik = 4;
+					break;
+				case "PB":
+					mnoznik = 5;
+					break;
+				case "EB":
+					mnoznik = 6;
+					break;
+				case "ZB":
+					mnoznik = 7;
+					break;
+				case "YB":
+					mnoznik = 8;
+					break;
+			}
+
 		for(int a = 0;a <mnoznik;a++)
 		{
 			pojemnosc_fizyczna *=1000;
